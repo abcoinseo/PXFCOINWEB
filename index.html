@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelFrogX PXFX | Jump into the Future of Crypto | Play to Earn Token</title>
+    <meta name="description" content="PixelFrog PXFX - Professional Play to Earn cryptocurrency with 100 Trillion supply. Join the future of gaming and crypto with our innovative frog-themed token.">
+    <meta name="keywords" content="PixelFrog, PXFX, cryptocurrency, play to earn, crypto token, blockchain gaming, TON network">
+    <meta property="og:title" content="PixelFrog PXFX | Jump into the Future of Crypto">
+    <meta property="og:description" content="Professional Play to Earn cryptocurrency with 100 Trillion supply. Join the future of gaming and crypto.">
+    <meta property="og:image" content="https://i.postimg.cc/WzS2sS6Y/Leonardo-Phoenix-09-Adorable-pixelart-green-frog-with-big-spar-0-removebg-preview.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PixelFrog PXFX | Jump into the Future of Crypto">
+    <meta name="twitter:description" content="Professional Play to Earn cryptocurrency with 100 Trillion supply.">
+    <meta name="twitter:image" content="https://i.postimg.cc/WzS2sS6Y/Leonardo-Phoenix-09-Adorable-pixelart-green-frog-with-big-spar-0-removebg-preview.png">
+    
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #00ff88;
+            --dark-green: #00cc6a;
+            --light-green: #66ffaa;
+            --accent-green: #00ffcc;
+            --bg-dark: #0a0a0a;
+            --bg-secondary: #111111;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-accent: #00ff88;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #001a0a 50%, var(--bg-dark) 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 20%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 255, 204, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 70%, rgba(0, 204, 106, 0.05) 0%, transparent 50%);
+            animation: backgroundFloat 20s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        @keyframes backgroundFloat {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            33% { transform: scale(1.1) rotate(1deg); }
+            66% { transform: scale(0.95) rotate(-1deg); }
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .navbar.scrolled {
+            background: rgba(10, 10, 10, 0.98);
+            box-shadow: 0 8px 32px rgba(0, 255, 136, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover img {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-green);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 0 2rem;
+        }
+
+        /* Animated Frog Image */
+        .hero-frog {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 120px;
+            z-index: 3;
+            animation: frogBounce 3s ease-in-out infinite;
+            filter: drop-shadow(0 10px 30px rgba(0, 255, 136, 0.3));
+        }
+
+        .hero-frog img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @keyframes frogBounce {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0px) scale(1);
+            }
+            25% {
+                transform: translateX(-50%) translateY(-15px) scale(1.05);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-25px) scale(1.1) rotate(2deg);
+            }
+            75% {
+                transform: translateX(-50%) translateY(-15px) scale(1.05) rotate(-1deg);
+            }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+            margin-top: 80px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 8px 20px;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(20px);
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 1.5rem;
+            backdrop-filter: blur(20px);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 255, 136, 0.2);
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--dark-green) 100%);
+            color: var(--bg-dark);
+            box-shadow: 0 8px 32px rgba(0, 255, 136, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(0, 255, 136, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--glass-bg);
+            color: var(--text-primary);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(20px);
+        }
+
+        .btn-secondary:hover {
+            background: var(--glass-border);
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 4rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .feature-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 2rem;
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-green);
+            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.2);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: var(--bg-dark);
+            font-size: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* Token Info */
+        .token-info {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            margin: 4rem 0;
+            position: relative;
+        }
+
+        .token-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.02) 0%, rgba(0, 255, 204, 0.02) 100%);
+            border-radius: 24px;
+        }
+
+        .token-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .detail-item {
+            text-align: center;
+        }
+
+        .detail-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .detail-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            word-break: break-all;
+        }
+
+        .contract-address {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            border: 1px solid var(--glass-border);
+        }
+
+        /* Social Links */
+        .social-section {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .social-link {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(20px);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .social-link:hover::before {
+            left: 100%;
+        }
+
+        .social-link:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-green);
+            box-shadow: 0 16px 48px rgba(0, 255, 136, 0.2);
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--primary-green);
+        }
+
+        .social-text {
+            font-weight: 600;
+        }
+
+        /* Play to Earn Section */
+        .play-earn-section {
+            background: var(--bg-secondary);
+            border-radius: 32px;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .play-earn-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0, 255, 136, 0.05) 0%, rgba(0, 255, 204, 0.05) 100%);
+        }
+
+        .play-earn-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .earn-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .earn-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 2rem;
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .earn-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.15);
+            border-color: var(--primary-green);
+        }
+
+        .earn-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--accent-green) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: var(--bg-dark);
+            font-size: 1.2rem;
+        }
+
+        .earn-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .earn-description {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-secondary);
+            padding: 3rem 2rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--glass-border);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            margin-bottom: 2rem;
+        }
+
+        .footer-text {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-disclaimer {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            opacity: 0.7;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.3);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            70% {
+                transform: scale(0.9);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Floating elements */
+        .floating-frog {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-frog:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-frog:nth-child(2) {
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .floating-frog:nth-child(3) {
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+            66% {
+                transform: translateY(10px) rotate(-5deg);
+            }
+        }
+
+        /* Copy functionality */
+        .copy-btn {
+            background: none;
+            border: 1px solid var(--glass-border);
+            color: var(--primary-green);
+            border-radius: 8px;
+            padding: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-left: 8px;
+        }
+
+        .copy-btn:hover {
+            background: var(--primary-green);
+            color: var(--bg-dark);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 0 1rem;
+            }
+
+            .section {
+                padding: 4rem 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll progress indicator */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-green) 0%, var(--accent-green) 100%);
+            z-index: 1001;
+            transition: width 0.1s ease;
+        }
+
+        /* Loading animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .frog-loader {
+            width: 80px;
+            height: 80px;
+            background: url('https://i.postimg.cc/WzS2sS6Y/Leonardo-Phoenix-09-Adorable-pixelart-green-frog-with-big-spar-0-removebg-preview.png') center/contain no-repeat;
+            animation: bounce 1.5s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading" id="loading">
+        <div class="frog-loader"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="https://i.postimg.cc/WzS2sS6Y/Leonardo-Phoenix-09-Adorable-pixelart-green-frog-with-big-spar-0-removebg-preview.png" alt="PixelFrog">
+                <span>PixelFrogX</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#earn">Play to Earn</a></li>
+                <li><a href="#community">Community</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Floating Background Elements -->
+    <div class="floating-frog"></div>
+    <div class="floating-frog"></div>
+    <div class="floating-frog"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-frog">
+            <img src="https://i.postimg.cc/WzS2sS6Y/Leonardo-Phoenix-09-Adorable-pixelart-green-frog-with-big-spar-0-removebg-preview.png" alt="PixelFrog Mascot">
+        </div>
+        <div class="hero-content animate-on-scroll">
+            <div class="hero-badge">
+                <span class="material-icons">rocket_launch</span>
+                Jump into the Future with PixelFrogX
+            </div>
+            <h1 class="hero-title">PIXELFROGX</h1>
+            <p class="hero-subtitle">
+                The revolutionary play-to-earn cryptocurrency that combines gaming, DeFi, and community rewards. 
+                Join millions of players earning PXFX tokens in the ultimate blockchain gaming ecosystem.
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-value">100T</div>
+                    <div class="stat-label">Total Supply</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">TON</div>
+                    <div class="stat-label">Network</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">PXFX</div>
+                    <div class="stat-label">Token Symbol</div>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="https://t.me/PXFCoinBot" class="btn btn-primary">
+                    <span class="material-icons">play_arrow</span>
+                    Start Earning
+                </a>
+                <a href="https://tonscan.org/jetton/EQAHQwxPJG4Pa-BYLVoyWdNkGRD66DgEwxSAekKIeHnNshL6" class="btn btn-secondary">
+                    <span class="material-icons">analytics</span>
+                    View on TONScan
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section" id="features">
+        <h2 class="section-title animate-on-scroll">Why Choose PixelFrog?</h2>
+        <p class="section-subtitle animate-on-scroll">
+            Experience the next generation of cryptocurrency with innovative features designed for the future of digital finance.
+        </p>
+        
+        <div class="features-grid">
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">
+                    <span class="material-icons">games</span>
+                </div>
+                <h3 class="feature-title">Play to Earn</h3>
+                <p class="feature-description">
+                    Earn PXFX tokens by playing games, completing challenges, and participating in community events.
+                </p>
+            </div>
+            
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">
+                    <span class="material-icons">security</span>
+                </div>
+                <h3 class="feature-title">Secure & Transparent</h3>
+                <p class="feature-description">
+                    Built on TON blockchain with complete transparency and advanced security features for peace of mind.
+                </p>
+            </div>
+            
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">
+                    <span class="material-icons">group</span>
+                </div>
+                <h3 class="feature-title">Strong Community</h3>
+                <p class="feature-description">
+                    Join thousands of active community members across Telegram, Twitter, and YouTube platforms.
+                </p>
+            </div>
+            
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">
+                    <span class="material-icons">speed</span>
+                </div>
+                <h3 class="feature-title">Fast Transactions</h3>
+                <p class="feature-description">
+                    Lightning-fast transactions with minimal fees thanks to the TON network's advanced technology.
+                </p>
+            </div>
+            
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">
+                    <span class="material-icons">trending_up</span>
+                </div>
+                <h3 class="feature-title">Deflationary</h3>
+                <p class="feature-description">
+                    Smart tokenomics with burn mechanisms and rewards that increase token value over time.
+                </p>
+            </div>
+            
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">
+                    <span class="material-icons">eco</span>
+                </div>
+                <h3 class="feature-title">Eco-Friendly</h3>
+                <p class="feature-description">
+                    Environmentally conscious blockchain technology with minimal energy consumption.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Token Info Section -->
+    <section class="section" id="tokenomics">
+        <h2 class="section-title animate-on-scroll">Tokenomics</h2>
+        <div class="token-info animate-on-scroll">
+            <div class="token-details">
+                <div class="detail-item">
+                    <div class="detail-label">Total Supply</div>
+                    <div class="detail-value">100,000,000,000,000</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Network</div>
+                    <div class="detail-value">TON Blockchain</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Symbol</div>
+                    <div class="detail-value">PXFX</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 2rem; text-align: center;">
+                <div class="detail-label">Contract Address</div>
+                <div class="contract-address">
+                    <span id="contractAddress">EQAHQwxPJG4Pa-BYLVoyWdNkGRD66DgEwxSAekKIeHnNshL6</span>
+                    <button class="copy-btn" onclick="copyContract()">
+                        <span class="material-icons">content_copy</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Play to Earn Section -->
+    <section class="section" id="earn">
+        <div class="play-earn-section animate-on-scroll">
+            <div class="play-earn-content">
+                <h2 class="section-title">Play to Earn PXFX</h2>
+                <p class="section-subtitle">
+                    Multiple ways to earn rewards in the PixelFrog ecosystem. Start playing and earning today!
+                </p>
+                
+                <div class="earn-methods">
+                    <div class="earn-card">
+                        <div class="earn-icon">
+                            <span class="material-icons">videogame_asset</span>
+                        </div>
+                        <h3 class="earn-title">Gaming Rewards</h3>
+                        <p class="earn-description">Play mini-games and complete challenges to earn PXFX tokens daily.</p>
+                    </div>
+                    
+                    <div class="earn-card">
+                        <div class="earn-icon">
+                            <span class="material-icons">task_alt</span>
+                        </div>
+                        <h3 class="earn-title">Daily Tasks</h3>
+                        <p class="earn-description">Complete simple daily tasks and social activities for bonus rewards.</p>
+                    </div>
+                    
+                    <div class="earn-card">
+                        <div class="earn-icon">
+                            <span class="material-icons">people</span>
+                        </div>
+                        <h3 class="earn-title">Referral Program</h3>
+                        <p class="earn-description">Invite friends and earn a percentage of their rewards forever.</p>
+                    </div>
+                    
+                    <div class="earn-card">
+                        <div class="earn-icon">
+                            <span class="material-icons">stars</span>
+                        </div>
+                        <h3 class="earn-title">Staking Rewards</h3>
+                        <p class="earn-description">Stake your PXFX tokens and earn passive income with high APY.</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 3rem;">
+                    <a href="https://t.me/PXFCoinBot" class="btn btn-primary">
+                        <span class="material-icons">play_arrow</span>
+                        Start Earning Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Social Links Section -->
+    <section class="social-section" id="community">
+        <h2 class="section-title animate-on-scroll">Join Our Community</h2>
+        <p class="section-subtitle animate-on-scroll">
+            Connect with thousands of PixelFrog holders and stay updated with the latest news and developments.
+        </p>
+        
+        <div class="social-grid">
+            <a href="https://t.me/pixelfrog_pxf" class="social-link animate-on-scroll">
+                <span class="material-icons social-icon">telegram</span>
+                <div>
+                    <div class="social-text">Telegram Channel</div>
+                    <div style="font-size: 0.8rem; color: var(--text-secondary);">Official Updates</div>
+                </div>
+            </a>
+            
+            <a href="https://t.me/PixelfrogCommunity" class="social-link animate-on-scroll">
+                <span class="material-icons social-icon">chat</span>
+                <div>
+                    <div class="social-text">Community Chat</div>
+                    <div style="font-size: 0.8rem; color: var(--text-secondary);">Join the Discussion</div>
+                </div>
+            </a>
+            
+            <a href="https://t.me/PXFCoinBot" class="social-link animate-on-scroll">
+                <span class="material-icons social-icon">smart_toy</span>
+                <div>
+                    <div class="social-text">Earning Bot</div>
+                    <div style="font-size: 0.8rem; color: var(--text-secondary);">Start Playing & Earning</div>
+                </div>
+            </a>
+            
+            <a href="https://x.com/PixelFrogX" class="social-link animate-on-scroll">
+                <span class="material-icons social-icon">dynamic_feed</span>
+                <div>
+                    <div class="social-text">Twitter</div>
+                    <div style="font-size: 0.8rem; color: var(--text-secondary);">Follow for Updates</div>
+                </div>
+            </a>
+            
+            <a href="https://www.youtube.com/@PixelFrogCoin" class="social-link animate-on-scroll">
+                <span class="material-icons social-icon">play_circle</span>
+                <div>
+                    <div class="social-text">YouTube</div>
+                    <div style="font-size: 0.8rem; color: var(--text-secondary);">Educational Content</div>
+                </div>
+            </a>
+            
+            <a href="https://tonscan.org/jetton/EQAHQwxPJG4Pa-BYLVoyWdNkGRD66DgEwxSAekKIeHnNshL6" class="social-link animate-on-scroll">
+                <span class="material-icons social-icon">search</span>
+                <div>
+                    <div class="social-text">TONScan</div>
+                    <div style="font-size: 0.8rem; color: var(--text-secondary);">View Contract</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="#" class="logo">
+                    <img src="https://i.postimg.cc/WzS2sS6Y/Leonardo-Phoenix-09-Adorable-pixelart-green-frog-with-big-spar-0-removebg-preview.png" alt="PixelFrog">
+                    <span>PixelFrog PXFX</span>
+                </a>
+            </div>
+            <p class="footer-text">© ALL Time PixelFrog. All rights reserved.</p>
+            <p class="footer-disclaimer">
+                PixelFrogX (PXFX) is a utility token for gaming and community rewards. 
+                This is not financial advice. Please do your own research before investing. 
+                Cryptocurrency investments carry risk and may result in loss of capital.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loading').classList.add('hidden');
+            }, 1500);
+        });
+
+        // Scroll progress indicator
+        window.addEventListener('scroll', function() {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const navbar = document.getElementById('navbar');
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (window.pageYOffset / totalHeight) * 100;
+            
+            scrollProgress.style.width = progress + '%';
+            
+            // Navbar background on scroll
+            if (window.pageYOffset > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Animate on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            const windowHeight = window.innerHeight;
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Copy contract address function
+        function copyContract() {
+            const contractAddress = document.getElementById('contractAddress').textContent;
+            navigator.clipboard.writeText(contractAddress).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<span class="material-icons">check</span>';
+                btn.style.background = 'var(--primary-green)';
+                btn.style.color = 'var(--bg-dark)';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.style.background = 'none';
+                    btn.style.color = 'var(--primary-green)';
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert('Contract address copied to clipboard!');
+            });
+        }
+
+        // Interactive hover effects for cards
+        document.querySelectorAll('.feature-card, .earn-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Enhanced scroll animations
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelectorAll('.floating-frog');
+            
+            parallax.forEach((element, index) => {
+                const speed = 0.5 + (index * 0.2);
+                element.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.1}deg)`;
+            });
+        });
+
+        // Add some particle effects
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.style.position = 'absolute';
+            particle.style.width = '4px';
+            particle.style.height = '4px';
+            particle.style.background = 'var(--primary-green)';
+            particle.style.borderRadius = '50%';
+            particle.style.opacity = '0.6';
+            particle.style.pointerEvents = 'none';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            particle.style.top = Math.random() * window.innerHeight + 'px';
+            particle.style.animation = 'particleFloat 8s linear infinite';
+            
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 8000);
+        }
+
+        // Add CSS for particle animation
+        const particleStyle = document.createElement('style');
+        particleStyle.textContent = `
+            @keyframes particleFloat {
+                0% {
+                    transform: translateY(0px) translateX(0px);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 0.6;
+                }
+                90% {
+                    opacity: 0.6;
+                }
+                100% {
+                    transform: translateY(-100vh) translateX(50px);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(particleStyle);
+
+        // Create particles periodically
+        setInterval(createParticle, 3000);
+
+        // Mobile menu functionality
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Add structured data for SEO
+        const structuredData = {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "PixelFrog PXFX",
+            "description": "Professional Play to Earn cryptocurrency with 100 Trillion supply",
+            "url": window.location.href,
+            "logo": "https://i.postimg.cc/WzS2sS6Y/Leonardo-Phoenix-09-Adorable-pixelart-green-frog-with-big-spar-0-removebg-preview.png",
+            "sameAs": [
+                "https://t.me/pixelfrog_pxf",
+                "https://x.com/PixelFrogX",
+                "https://www.youtube.com/@PixelFrogCoin"
+            ]
+        };
+
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(structuredData);
+        document.head.appendChild(script);
+
+        // Performance optimization
+        document.addEventListener('DOMContentLoaded', function() {
+            // Lazy load images
+            const images = document.querySelectorAll('img[data-src]');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            images.forEach(img => imageObserver.observe(img));
+        });
+
+        // Add typing effect to hero title
+        function typeWriter(element, text, speed) {
+            let i = 0;
+            element.innerHTML = '';
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect after loading
+        setTimeout(() => {
+            const heroTitle = document.querySelector('.hero-title');
+            if (heroTitle) {
+                typeWriter(heroTitle, 'PIXELFROGX', 150);
+            }
+        }, 2000);
+    </script>
+</body>
+</html>
